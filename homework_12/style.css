@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    column-gap: 30px;
+     flex-wrap: wrap;
+     /*justify-content: space-between;*/
+
+   
+}
+
+.user {
+    display: flex;
+   
+    
+    flex-direction: column;
+}
+
+.user__image {
+    /*border-radius: 50%;*/
+   overflow: hidden;
+    
+}
