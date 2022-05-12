@@ -1,0 +1,699 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+HTML, body {
+    height: 100%;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header { /*весь хедер желтый фон*/
+    display: flex;
+    margin: 0 auto;
+    /*width: 100%;*/
+   /*max-width: 1440px;*/
+    height: 98px;
+    background-color:#EDD603;    
+    text-align: left;
+    align-items: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); 
+    padding: 14px 0px 14px 23px;
+   z-index: 1;
+}
+    
+.header-logo { /*логотип хедера*/
+    height: 70px;
+    padding: 23;
+}
+
+.header-shopname {
+   font-size: 48px;
+    height: 56px;
+    line-height: 56px;
+    padding-left: 30px;
+    font-weight: 400;
+    white-space: nowrap;
+    color: #652D90;
+}
+.header-menu {
+    display: flex;
+    height: 98px;
+    background-color: #EDD603;
+    text-align: right;
+    align-items: center;
+    padding-left: 484px;
+    padding-right: 36px;
+          
+}
+
+.header-menu-links {
+    display: flex;
+}
+.menu-links_link {
+    margin-left: 26px;
+    white-space: nowrap;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #652D90;
+    border-radius: 10px;
+    padding: 9px 13px;
+   }
+
+.menu-links_link:hover {
+    text-decoration: none;
+    background: #FFFFFF;
+}
+
+
+.header-mobile {
+    display: none; 
+}
+
+.main {
+    max-width: 1440px;
+      margin: 0 auto;
+}
+
+
+.contacts-content { 
+    width: 100%;
+    height: 100%;
+     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin-top: 51px;
+    padding: 24px 50px 31px 50px;
+    width: 900px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 15px; 
+}
+    @media screen and (max-width: 1000px) and (min-width: 768px) {  
+        .form {   
+            max-width: 700px; 
+        }
+    }
+    @media screen and (max-width: 767px) and (min-width: 320px) {   
+        .form {
+            max-width: 90%;
+            padding: 22px 10px 29px 12px;
+        }
+    }
+
+    
+.contacts-feedback {
+    text-align: center;
+     margin-top: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+ }
+
+    @media screen and (max-width: 767px) and (min-width: 320px) {   
+        .contacts-feedback {
+            font-size: 30px;
+        }
+    }
+
+.form__control {
+ 
+  position: relative;
+   margin-top: 25px;
+  
+}
+
+.form__control:first-child {
+    margin-top: 0;
+}
+.error {
+    color: red;
+}
+.form__input {
+    width: 800px;
+    height: 58px;
+    outline:none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border: 0;
+    padding: 15px 0px;
+    margin-top: 10px;
+    background: #FFFFFF;
+    /*border-bottom: 1px solid grey;
+    color: black;*/
+       
+}
+@media screen and (max-width: 1000px) and (min-width: 768px) {  
+    .form__input {   
+        max-width: 600px; 
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {   
+    .form__input {
+        max-width: 100%;
+        height: 45px;
+       
+    }
+}
+
+.form__input::placeholder { /*текст: Имя*/
+    height: 28px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #A39F9F;
+    
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {   
+    .form__input::placeholder {
+       font-size: 17px;
+    }
+}
+
+.form__input:focus { /*выделение в состоянии в фокусе*/
+    border-bottom: 1px solid black; 
+}
+
+
+.form-control input:focus {
+   outline: 0;
+}
+input.error {
+    border-color: red;
+}
+.form__checkbox.error +.form__label_checkbox {
+    color: red;
+} 
+
+.form__label {
+    /*width: 109px;*/
+    height: 28px;
+    /* margin-top: 10px;*/
+    font-style: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #797979;
+    flex: 0 0 12%;  
+    padding-right: 16px;
+}
+
+   .form__label_checkbox {
+      flex:auto;
+       height: 28px;
+       font-weight: 400;
+       font-size: 24px;
+       line-height: 28px;
+       color: #797979; 
+}
+
+.form_label-service {
+       font-size: 20px;
+}
+
+.users_agreement {
+    height: 28px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #EDD603;
+}
+   /*.users_agreement:hover {
+       border-bottom: 1px solid #EDD603;
+   }*/
+/*.form__input {
+    flex: auto;
+}
+*/
+.form__radio-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /*margin-top: 10px;*/
+    transition:.2s opacity; /*чтобы не переппрыгивало, а мягко переходило*/
+}
+
+.form__radio-wrapper:hover {
+    opacity: 0.5;
+}
+
+.form__radio {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+    margin-top: 10px;
+}  
+
+.form__radio:first-child {
+    margin-top: 8px;
+}
+
+.form__radio-marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #8D8C8C;
+    box-sizing: border-box;
+    margin-right: 16px;
+    position: relative;
+    padding-top: 4px;
+    background: #FFFFFF;
+}
+
+.form__radio-marker::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000000;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.form__radio:checked + .form__radio-marker::after { /*чтобы наш класс обратился к следующему элементу, мы игспользуем+*/
+opacity: 1;
+}
+
+/*.form__radio:hover + .form__radio-marker::after {
+    opacity: 0.4;
+}*/
+
+.form__radio-outline {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: -1;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    left:-5px;
+    top: -5px;
+    opacity: 0;
+}
+
+.form__radio:focus ~ .form__radio-outline {
+    opacity: 1;
+}
+.textarea {
+    width: 800px;
+    height: 320px;
+    outline:none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px; 
+    background: #FFFFFF;
+    padding: 15px 15px;
+    padding-bottom: 277px;
+    margin-top: 25px;
+    /*resize: vertical;*/
+    overflow: hidden; 
+    
+}
+
+@media screen and (max-width: 1000px) and (min-width: 768px) {  
+    .textarea {   
+        max-width: 600px; 
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {   
+    .textarea {
+        max-width: 100%;
+        height: 200px;
+       
+    }
+}
+
+.textarea::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #A39F9F;
+}
+
+@media screen and (max-width: 767px) and (min-width: 320px) {   
+    .texterea::placeholder {
+        max-width: 100%;
+        height: 200px;
+       
+        font-size: 17px;
+    }
+}
+
+.form__file-wrapper {
+    position: relative;
+}
+
+.form__file {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.form__button {
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    transition: .2s opacity;
+}
+
+.form__file:hover + .form__button {
+opacity: 0.7;
+}
+
+
+.form__checkbox-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form__checkbox-marker {
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+    background: #FFFFFF;
+    border: 2px solid #8D8B8B;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.form__checkbox-marker::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: black;
+    opacity: 0;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+.form__checkbox {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.form__checkbox:checked + .form__checkbox-marker::after {
+    opacity: 1;
+}
+
+.form__button_submit {
+    width: 228px;
+    height: 53px;
+    background: #EDD603;
+    border-radius: 10px;
+    padding: 15px 64px 15px 63px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    align-items: center;
+    color: #000000;
+    margin: 42px 0px 31px 286px;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 768px) {  
+    .form__button_submit {   
+        margin: 42px 0px 31px 200px;
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {   
+    .form__button_submit {
+        margin: 66px 0px 31px 100px;
+       
+    }
+}
+
+.form__button_submit:hover {
+    opacity: 0.7;
+}
+
+.footer { /* весь футер с серым фоном*/
+    margin: 0 auto;
+    max-width: 1440px;
+    height: 300px;        
+    background: #535252;
+    padding: 25px 45px 25px 45px;
+}
+
+.links_container { /*большая коробка внутри футера, в которой коробочки со ссылками, у которых есть общее название и ссылки*/
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   background-color: #535252;
+}
+
+.all_reference { /* Первый квадрат с категориями товаров, с названием и ссылками на виды товаров*/
+    width: 25%;
+    height: auto;
+}
+
+.site_list { /*название текстом*/
+    font-weight: normal;
+    font-style: normal;
+    height: 28px;
+    font-size: 24px;
+    line-height: 28px;
+    padding-left: 0px;
+    padding-top: 0px;
+    margin-bottom: 19px;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.site_list_reference {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+
+.site_list_reference:link {
+    color: white;
+    text-decoration: none;
+}
+
+.site_list_reference:hover {
+    text-decoration: none;
+    color: yellow;
+}
+
+.copiright_logo { /*Четвертый квадрат с футер-логотипом и копирайтом*/
+    width: 25%;
+    height: auto;
+    text-align: right;
+}
+
+.copyright { /*текст копирайта*/
+    font-weight: normal;
+    font-style: normal;
+    height: 21px;
+    padding-top: 48px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.footer-logo { /*логотип футера*/
+    width: 181px;
+    height: 181px;
+    padding-right: 0px;
+    padding-top: 0px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+} 
+@media screen and (max-width: 1439px) and (min-width: 1024px) {
+    /* главная страница с товарами*/
+    
+.header-shopname {
+    font-size: 38px;
+    padding-left: 25px;  
+}
+    
+.header-menu {
+   /* padding-left: 450px;*/
+     margin-right: 0px;   
+}
+
+.header-menu-links {
+    font-size: 30px;
+}
+
+.footer {
+    padding-left: 10px;
+     padding-right: 10px;
+ }
+
+.all_reference {
+    padding-left: 5px;
+}
+}
+    
+ @media screen and (max-width: 1024px) and (min-width: 768px) {
+    
+.header-shopname {
+    font-size: 30px;
+    padding-left: 25px;
+}
+     
+.header-menu {
+    padding-left: 300px;
+    margin-right: 0px;
+    font-size: 20px;
+}
+}
+   
+@media screen and (max-width: 767px) and (min-width: 320px) {
+.header {
+    position: relative;
+    height: 78px;
+    padding: 19px 0 19px 16px;
+    text-align: center;
+    z-index: 0;
+}   
+.header-logo {
+    height: 40px;
+    padding: 0;
+}
+    
+.header-shopname {
+    font-size: 24px;
+    padding-left: 20px;
+}
+    
+.header-menu {
+    display: none;       
+}
+
+.header-mobile {
+    display: flex;
+    margin: 0 auto;
+    height: 59px;
+    background-color:#EDD603;    
+    text-align: center;
+    align-items: center;
+    padding: 19px 37px 19px 41px;
+    z-index: 2;
+}
+  
+.header-mobile-menu {
+    display:flex;
+     width: 320px;
+    height: 59px;
+    background-color: #EDD603; 
+     
+}
+    
+.header-mobile-menu-links {
+    display: flex;
+}
+    
+.mobile-menu-links_link {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+     /* identical to box height */
+     white-space: nowrap;
+     color: black;
+     border-radius: 10px;
+     padding: 9px 13px;
+     text-align: center;
+}
+
+ .mobile-menu-links_link:hover {
+    text-decoration: none;
+    background-color: white;
+}
+ 
+   
+      
+.footer {
+    height: auto;
+    padding: 24px 16px 40px 16px;
+} 
+.links_container {
+    flex-direction: column;
+    height: auto;     
+}
+       
+.all_reference {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 40px;
+}
+
+.site_list { /*название текстом*/
+    font-size: 21px;
+    margin-bottom: 16px;
+    margin-top: 0px;  
+}
+    
+.site_list_reference {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.copiright_logo {
+    padding: 0;
+}
+.copyright { /*текст копирайта*/
+    width: 227px;
+    padding: 20px 0px 0px;
+    font-size: 18px;
+}   
+}

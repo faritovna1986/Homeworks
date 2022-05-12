@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_13</title>
+    <link rel="stylesheet" type="text/css" href="style_contacts.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+             <a href="#"><img class="header-logo" src="img/logo_header.png" alt=""></a>
+            <h1 class= "header-shopname">Интернет-магазин</h1>
+                <nav class="header-menu">
+                    <ul class="header-menu-links">
+                        <li><a href="index.html" class="menu-links_link">Главная
+                            </a>
+                        </li>
+                        <li><a href="Contacts.html" class="menu-links_link">Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                          
+        </header>
+        <section class="header-mobile">
+        <nav class="header-menu_mobile">
+            <ul class="header-menu-links">
+                <li><a href="index.html" class="mobile-menu-links_link">Главная
+                    </a>
+                </li>
+                <li><a href="Contacts.html" class="mobile-menu-links_link">Контакты
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        </section>   
+        <main class="main">
+                         
+                    <div class="contacts-content">
+                        
+                        <form class="form">
+                        <h2 class="contacts-feedback">Обратная связь</h2>    
+                            <div class="form__control">
+                                <label class="form__label" for="input-1">Имя*:</label> 
+                                <input type="text" id="input-1" class="form__input" name="input-1" placeholder="Имя" required>
+                                <div class="error"></div>
+                            </div>
+
+                            <div class="form__control">    
+                                <label class="form__label" for="input-2">E-mail*:</label> 
+                                <input type="email" id="input-2" class="form__input" name="input-2" placeholder="E-mail адрес" required>
+                                <div class="error"></div>
+                            </div>
+
+                            <div class="form__control">
+                                
+                                  <label class="form__label" for="input-3">Пол*:</label>   
+                                    <div class="form__radio-wrapper">
+                                        <input class="form__radio" type="radio" id="input-3" name="sex" value="man" required>
+                                            <div class="form__radio-marker"></div> 
+                                            <div class="form__radio-outline"></div>
+                                            <label class="form__label" for="input-3">Мужчина</label>
+                                    </div>
+
+                                    <div class="form__radio-wrapper">
+                                        <input class="form__radio" type="radio" id="input-3" name="sex" value="women"required> 
+                                            <div class="form__radio-marker"></div>
+                                            <div class="form__radio-outline"></div>
+                                            <label class="form__label" for="input-3">Женщина</label>
+                                    </div>
+                            </div>
+
+                          <input type="textarea" id="input-4" class="textarea" name="input-4" placeholder="Введите сообщение...">
+                   
+
+                    <div class="form__control">
+                        <label for="select" class="form_label-service">Какие еще услуги могут Вас заинтересовать?</label>
+                        <select id="select" name="service">
+                        
+                            <option value="option-1">Доставка по регионам</option>
+                            <option value="option-2">Продажа антенн</option>
+                            <option value="option-3">Настройка телевизора</option>
+                            <option value="option-4">Сопровождение покупки по телефону</option>
+                            <option value="option-5">Бесплатный единовременный ремонт по истечении гарантии</option>
+                            
+                        </select>
+                    </div>
+
+                    <div class="form__control">
+                    <div class=form__file-wrapper>
+                        <input type="file" name="file" class="form__file">
+                        <button class="form__button">Загрузить файл</button>
+</div>
+                    </div>
+
+                    <div class="form__control">
+                
+                        <div class="form__checkbox-wrapper">
+                            <input class="form__checkbox" type="checkbox" id="input-5" name="agreement" value="agreementCheckbox" required>
+                               <div class="form__checkbox-marker"></div> 
+                               <div class="form__checkbox-outline"></div>
+                               <label class="form__label form__label_checkbox" for="input-5">Принимаю условия <a href="#" class="users_agreement">Пользовательского Соглашения*</a></label>
+                        </div>
+                        <button class="form__button form__button_submit" type="submit">Отправить</button>
+                        </form>
+
+                    </div>
+                         
+        </main>
+        
+        <footer class="footer">
+            <section class="links_container">
+                <div class="all_reference">
+                    <h3 class="site_list">Категории товаров
+                    </h3>
+                        <ul>
+                            <li><a href="#" class="site_list_reference">Бытовая техника</a></li>
+                            <li><a href="#"class="site_list_reference">Электроника</a></li>
+                            <li><a href="#" class="site_list_reference">Одежда</a></li>
+                            <li><a href="#"class="site_list_reference">Обувь</a></li>
+                            <li><a href="#" class="site_list_reference">Аксессуары</a></li>
+                        </ul>
+                </div>
+                <div class="all_reference">
+                    <h3 class="site_list">Разделы сайта                
+                    </h3> 
+                        <ul>
+                            <li><a href="#" class="site_list_reference">Магазин</a></li>
+                            <li><a href="#" class="site_list_reference">Контакты</a></li>
+                            <li><a href="#" class="site_list_reference">Блог</a></li>
+                            <li><a href="#" class="site_list_reference">Полтитика конфиденциальности</a></li>
+                            <li><a href="#" class="site_list_reference">Договор оферты</a></li>
+                            <li><a href="#" class="site_list_reference">О нас</a></li>
+                        </ul>
+                </div>
+                <div class="all_reference">
+                    <h3 class="site_list">Полезные ссылки                
+                    </h3> 
+                        <ul>
+                            <li><a href="https://www.google.com" class="site_list_reference">Google.com</a></li>
+                            <li><a href="ya.ru" class="site_list_reference">yandex.ru</a></li>
+                            <li><a href="https://developer.mozilla.org/ru" class="site_list_reference">developer.mozilla.org</a></li>
+                            <li><a href="https://developer.mozilla.org/ru" class="site_list_reference">mdn</a></li>
+                        </ul>
+                </div>
+                <div class="copiright_logo">
+                    <a href="#"><img class="footer-logo" src="img/logo_footer.png" alt=""></a> 
+                    <h4 class="copyright">(с) Интернет-магазин 2022</h4>
+                </div>  
+            </section>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
