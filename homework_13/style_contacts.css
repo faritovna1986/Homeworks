@@ -147,20 +147,45 @@ body {
             font-size: 30px;
         }
     }
-
 .form__control {
- 
-  position: relative;
+    position: relative;
    margin-top: 25px;
+}
+nameControl, emailControl {
+position: relative;
+}
+
+.nameControl.error::before, .emailControl.error::before {
+     content: '* Заполните поле';
+     bottom: 0px;
+    left: 0;
+    width: 100%;
+    color: red;
+    font-size: 12px;
+    position: relative;
+  
   
 }
 
 .form__control:first-child {
     margin-top: 0;
 }
-.error {
+.input.error {
+    border-color: red;
+}
+
+.input::placeholder {
+    color: #ccc;
+}
+
+.checkbox__label {
+    user-select: none;
+}
+
+.checkbox__input.error + .checkbox__label {
     color: red;
 }
+
 .form__input {
     width: 800px;
     height: 58px;

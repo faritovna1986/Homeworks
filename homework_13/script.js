@@ -2,7 +2,7 @@
 
 
 //Все ли поля валидны, все ли поля заполнены
-    const fields = {};
+ /*   const fields = {};
 
     const inputs = document.querySelectorAll('input,texterea');
     const form = document.querySelector('form');
@@ -25,39 +25,85 @@
             console.log('value: ', value);
         });
 
-       /* console.log(Object.values(fields));*/
-        console.log(result.length);
+      // console.log(Object.values(fields));
+       console.log(result.length);
 
-   // });
+    });*/
    
- 
-       
-       inputs.addEventListener('input', (event)=> {
+ // Обязательность полей
 
-        if (inputs.value === ' ') {
-            inputs.classList.add('.error');
-            console.log('Поле не заполнено');
-        } else {
-            inputs.classList.remove('.error');
-        }
-
-    })
-  return false;
-    });
-
-
-/*
-function drawerror(error = []) {
-    let resultHtml = '';
-
-    inputs.Error.forEach((inputs) => {
-        resultHtml += `
-           <div class="error">Не заполнено</div>`;
-                        
-
-    });
-
-    console.log(resultHtml);
+ let form = document.querySelector('.form'),
+    formInputs = document.querySelectorAll('.user__input')
     
-    form.innerHTML = resultHtml;
- }*/
+    inputEmail = document.querySelector('.user__input-email'),
+    
+    inputCheckbox = document.querySelector('.user__input-checkbox');
+    let nameControl = document.querySelector('.nameControl');
+    let emailControl = document.querySelector('.emailControl');
+    let checkboxControl = document.querySelector('.form__checkbox-wrapper');
+
+
+
+function validateEmail(email) {
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+
+function validateCountry(country) {
+    let re = new RegExp('.co$');
+    return re.test(String(country).toLowerCase());
+}
+
+
+form.onsubmit = function () {
+    let emailVal = inputEmail.value;
+    let emptyInputs = Array.from(formInputs).filter(input => input.value === '');
+
+    formInputs.forEach(function (input) {
+        if (input.value === '') {
+            input.classList.add('error');
+            nameControl.classList.add('error');
+           emailControl.classList.add('error');
+        } else {
+            input.classList.remove('error');
+            nameControl.classList.remove('error');
+            emailControl.classList.remove('error');
+        }
+    });
+    
+    
+    if (emptyInputs.length !== 0) {
+        console.log('Поля не заполнены');
+        return false;
+    }
+    if (!validateEmail(emailVal)) {
+        console.log('Email-адрес не заполнен');
+        inputEmail.classList.add('error');
+        emailControl.classList.add('errorType2');
+        return false;
+    } else {
+        inputEmail.classList.remove('error');
+        notValidateEmail.classList.remove('errorType2');
+    }
+
+    if (validateCountry(emailVal)) {
+        console.log('неверный Email');
+        inputEmail.classList.add('error');
+        return false;
+    } else {
+        inputEmail.classList.remove('error');
+    }
+
+    if (!inputCheckbox.checked) {
+        console.log('Чекбокс не отмечен');
+        inputCheckbox.classList.add('error');
+        checkboxControl.classList.add('error');
+        return false;
+    } else {
+        inputCheckbox.classList.remove('error');
+        checkboxControl.classList.remove('error');
+    }
+
+}
+
