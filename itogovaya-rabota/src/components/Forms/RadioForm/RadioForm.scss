@@ -1,0 +1,88 @@
+.form__control {
+    position: relative;
+   margin-top: 25px;
+}
+
+.form__sex {
+    height: 19px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #797979;
+}
+
+
+.form__radio-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /*margin-top: 10px;*/
+    transition:.2s opacity; /*чтобы не переппрыгивало, а мягко переходило*/
+
+        &:hover {
+            opacity: 0.5;
+        }
+}
+
+.form__radio {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+    margin-top: 10px;
+    
+    &:first-child {
+    margin-top: 8px;
+}
+}  
+
+
+
+.form__radio-marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #8D8C8C;
+    box-sizing: border-box;
+    margin-right: 16px;
+    position: relative;
+    padding-top: 4px;
+    background: #FFFFFF;
+    
+        &::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000000;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
+
+.form__radio:checked + .form__radio-marker::after { /*чтобы наш класс обратился к следующему элементу, мы игспользуем+*/
+opacity: 1;
+}
+
+.form__radio-outline {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: -1;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    left:-5px;
+    top: -5px;
+    opacity: 0;
+}
+
+.form__radio:focus ~ .form__radio-outline {
+    opacity: 1;
+}

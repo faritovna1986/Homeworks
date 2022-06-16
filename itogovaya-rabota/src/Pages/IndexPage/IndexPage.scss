@@ -1,0 +1,40 @@
+$w-fontWeight:400;
+$s-fontStyle:normal;
+$c-white: #FFFFFF;
+$c-yellow:#EDD603;
+$s-referenceFontSize:18px;
+$c-hover:yellow;
+$c-purple:#652D90;
+$c-black:#000000;
+$c-grey:#535252;
+
+.wrapper {
+max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.users__style {
+    font-size: 30px;
+    height: 56px;
+    line-height: 56px;
+    padding-left: 30px;
+    font-weight: $w-fontWeight;
+    white-space: nowrap;
+    color: $c-purple;
+
+        @media screen and (max-width: 1439px) and (min-width: 1024px) {
+            font-size: 38px;
+            padding-left: 25px;
+        }
+        
+        @media screen and (max-width: 1024px) and (min-width: 768px) {
+                font-size: 30px;
+                padding-left: 25px;
+        }
+        
+        @media screen and (max-width: 767px) and (min-width: 320px) {
+                font-size: 24px;
+                padding-left: 20px;
+            }
+}

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Lobster';
+  src: url('assets/fonts/Lobster-Regular.woff2') format('woff2'),
+      url('assets/fonts/Lobster-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family:  Lobster, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5dfb9;
+}
+
+html, body {
+  height: 100%;
+}
+
+          
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
